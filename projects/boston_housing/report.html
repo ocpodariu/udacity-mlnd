@@ -12934,6 +12934,26 @@ Lastly, Client 1's house sits somewhere in between the other two houses, as it's
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Extra questions:</strong></p>
+<ul>
+<li>What kind of relationship do the independent variables have with the dependent variable?</li>
+</ul>
+<p>As seen in the figure "Correlation between features and predicted value" from Answer 1, there is a linear relationship between each independent variable and the target variable.
+For example, we can see that an increase in the number of rooms leads to a proportional increase in the house's selling price.</p>
+<ul>
+<li>Decision Tree, and in general tree based models, handle a kind of relationship between the IVs and DV better than non-tree based models. Which kind of relationship is that? How do tree based models handle that kind of relationship?</li>
+</ul>
+<p>Tree based models handle non-linear relationships better because they partition the feature space in a set of rectangles and attribute a particular value to each one.[1]
+This is in contrast to other types of models, which attempt to express the relationship between the independent variables and the dependent variable as an equation.</p>
+<p>[1] "The Elements of Statistical Learning", 2nd Ed., Trevor Hastie. Robert Tibshirani. Jerome Friedman</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Sensitivity">Sensitivity<a class="anchor-link" href="#Sensitivity">&#182;</a></h3><p>An optimal model is not necessarily a robust model. Sometimes, a model is either too complex or too simple to sufficiently generalize to new data. Sometimes, a model could use a learning algorithm that is not appropriate for the structure of the data given. Other times, the data itself could be too noisy or contain too few samples to allow a model to adequately capture the target variable — i.e., the model is underfitted.</p>
 <p><strong>Run the code cell below to run the <code>fit_model</code> function ten times with different training and testing sets to see how the prediction for a specific client changes with respect to the data it's trained on.</strong></p>
 
