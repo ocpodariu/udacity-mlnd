@@ -12385,8 +12385,10 @@ In the example above, the model has a coefficient of determination of 0.92, whic
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> 
-Splitting the dataset into training and testing subsets allows us to measure how good our model is by testing it on data it hasn't seen before. We can use the training subset to train our model and then test it on the testing subset to see if it generalizes well.</p>
+<p><strong>Answer:</strong></p>
+<p>Splitting the dataset into training and testing subsets allows us to measure how good our model is by testing it on data it hasn't seen before. We can use the training subset to train our model and then test it on the testing subset to see if it generalizes well.
+If we wouldn't split the dataset and instead trained the model on the entire dataset, then we wouldn't be able to test its performance on unseen data.
+There would be no way to measure if it generalizes well.</p>
 
 </div>
 </div>
@@ -12473,6 +12475,10 @@ Having more than 400 training points would not produce a noticeable improvement 
 <p>In general, if the learning curves are converging to a score above our desired performance, then we've successfully built a good model and it's not necessary to add more training points.
 Although the testing score will get closer to the training score, it will do so only by small increments and it will eventually stop.
 Moreover, as we add more training points, the training dataset will become larger and it will take a longer time to train a model on it.</p>
+<p>As a side note, we could try improving the model's performance by adding more features.
+However, we need to make sure the features are relevant.
+Otherwise, we risk overfitting the data by learning irrelevant information from the data and actually decreasing the model's performance.
+Ultimately, choosing the features to train a model on comes down to identifying the ones that are the strongest predictors of the target variable.</p>
 
 </div>
 </div>
@@ -12542,6 +12548,9 @@ Moreover, as we add more training points, the training dataset will become large
 <p><strong>Answer:</strong></p>
 <p>The model trained with a maximum depth of 1 suffers from high bias because it has a poor performance on both the training and validation sets. It's too simplistic and it fails to capture any meaningful information from the features.</p>
 <p>On the other hand, the model trained with a maximum depth of 10 suffers from high variance because it has a great performance on the training set and a much lower performance on the validation set. This model is memorizing the training data and it fails to generalize well.</p>
+<p>To overcome these issues, we could try tuning the model's hyper-parameters or increasing the size of the training set.
+We could also try adding more relevant features to the dataset in the case of a high bias model, or removing irrelevant features in the case of a high variance model.
+If nothing works, then we should look for another learning algorithm that is better suited for our problem.</p>
 
 </div>
 </div>
@@ -12599,10 +12608,14 @@ In contrast, M3 obtains good training and validation scores, without overfitting
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Grid Search is a technique that helps us determine which hyper-parameter values offer the best performance. For a given learning algorithm and a list of hyper-parameters with different possible values, it trains a model for each combination of hyper-parameter values and selects the one with the best performance. It's a useful technique because it saves us from manually trying out all the different combinations.</p>
+<p>Grid Search is a technique that helps us determine which hyper-parameter values offer the best performance.</p>
+<p><em>Note that the hyper-parameters of a learning algorithm are distinct from its parameters.
+The hyper-parameters are properties that we manually set before training a model, while parameters are values that the algorithm must learn from the training data in order to produce a good model.
+In essence, the hyper-parameters control the final values of the parameters.[1]</em></p>
+<p>For a given learning algorithm and a list of hyper-parameters with different possible values, Grid Search trains a model for each combination of hyper-parameter values and selects the one with the best performance. It's a useful technique because it saves us from manually trying out all the different combinations.</p>
 <p>For example, if we wanted to optimize a Decision Tree model by tuning its <code>max_depth</code> and <code>min_samples_split</code> hyper-parameters, we could:</p>
 <ol>
-<li>Create a list of all possible values for each parameter:<ul>
+<li>Create a list of all possible values for each hyper-parameter:<ul>
 <li><code>[1, 3, 5]</code> for the maximum depth and</li>
 <li><code>[10, 50, 100]</code> for the minimum samples required to split a node</li>
 </ul>
@@ -12639,6 +12652,7 @@ In contrast, M3 obtains good training and validation scores, without overfitting
 </tr>
 </tbody>
 </table>
+<p>[1] "Parameters vs Hyperparameters" <a href="https://www.coursera.org/lecture/neural-networks-deep-learning/parameters-vs-hyperparameters-TBvb5">https://www.coursera.org/lecture/neural-networks-deep-learning/parameters-vs-hyperparameters-TBvb5</a></p>
 
 </div>
 </div>
