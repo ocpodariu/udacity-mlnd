@@ -1,4 +1,19 @@
-# machine-learning
-Content for Udacity's Machine Learning curriculum, which includes projects and their descriptions.
+# Machine Learning Engineer Nanodegree
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Please refer to [Udacity Terms of Service](https://www.udacity.com/legal) for further information.
+Projects developed as part of Udacity's Machine Learning Engineer Nanodegree.
+
+## Projects
+
+### 0. Titanic Survival Exploration
+* [View Jupyter Notebook](https://github.com/ocpodariu/udacity-mlnd/blob/master/projects/titanic_survival_exploration/titanic_survival_exploration.ipynb) or [Go to project directory](https://github.com/ocpodariu/udacity-mlnd/tree/master/projects/titanic_survival_exploration)
+* Explored the dataset to identify which features best predict a passenger's survival
+* Used those features to create decision functions to predict the survival of the passengers
+
+### 1. Predicting Boston Housing Prices
+* [View Jupyter Notebook](https://github.com/ocpodariu/udacity-mlnd/blob/master/projects/boston_housing/boston_housing.ipynb) or [Go to project directory](https://github.com/ocpodariu/udacity-mlnd/tree/master/projects/boston_housing)
+* Measured the linear correlation between features and selling price using Pearson's r
+* Observed the effect of different training and testing splits on model performance
+* Used learning and complexity curves to detect underfitting and overfitting
+* Combined Grid Search with cross-validation to find the optimal maximum depth for a decision tree regressor
+* Final model obtained an R^2 score of 0.77
+* Discussed the model's applicability in a real-world scenario
