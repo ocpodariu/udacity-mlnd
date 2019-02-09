@@ -17,3 +17,9 @@ Projects developed as part of Udacity's Machine Learning Engineer Nanodegree.
 * Combined Grid Search with cross-validation to find the optimal maximum depth for a decision tree regressor
 * Final model obtained an R^2 score of 0.77
 * Discussed the model's applicability in a real-world scenario
+
+### 2. SMS Spam Classification
+* [View Jupyter Notebook](https://github.com/ocpodariu/udacity-mlnd/blob/master/projects/spam_classifier/sms_spam_classifier.ipynb) or [Go to project directory](https://github.com/ocpodariu/udacity-mlnd/tree/master/projects/spam_classifier)
+* Transformed the SMS messages using the Bag-of-Words model
+* Generated features based on the frequency of each word
+* Classified SMS messages as spam or not spam with a Naive Bayes model
