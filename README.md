@@ -31,3 +31,11 @@ Projects developed as part of Udacity's Machine Learning Engineer Nanodegree.
 * Built a pipeline to quickly evaluate the performance of different algorithms
 * Analyzed AdaBoost's performance in relation to the maximum number of estimators
 * Identified the top 5 most important features and analyzed the effects of feature selection on AdaBoost's performance
+
+### 4. Creating Customer Segments
+* [View Jupyter Notebook](https://github.com/ocpodariu/udacity-mlnd/blob/master/projects/customer_segments/customer_segments.ipynb) or [Go to project directory](https://github.com/ocpodariu/udacity-mlnd/tree/master/projects/customer_segments)
+* Applied PCA to identify customer spending patterns and to reduce the dimensionality of the data
+* Compared K-means and Gaussian Mixture Model to decide which is more suitable for grouping customers into segments
+* Performed a silhouette analysis to determine optimal number of components for Gaussian Mixture Model
+* Designed an A/B test to measure the effect of a delivery service change on each customer segment
+* Trained a classifier on customer segment data to label new customers based on their estimated spendings
